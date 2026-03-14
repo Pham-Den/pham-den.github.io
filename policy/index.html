@@ -6,90 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Super Fast QR Scanner</title>
     <style>
+        :root {
+            --primary-color: #009688;
+            --primary-dark: #00796B;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-radius: 16px;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
             padding: 40px 20px;
-            background-color: #f9f9f9;
         }
 
         .container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 30px;
         }
 
         h1 {
             color: #1a1a1a;
-            border-bottom: 2px solid #009688;
-            padding-bottom: 10px;
-            margin-top: 0;
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         h2 {
-            color: #00796B;
-            margin-top: 30px;
+            color: var(--primary-dark);
+            margin-top: 40px;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--primary-color);
+            margin-right: 12px;
+            border-radius: 2px;
         }
 
         h3 {
             color: #444;
+            margin-top: 25px;
+            font-size: 1.2rem;
         }
 
         p,
         li {
             font-size: 16px;
-            color: #555;
+            color: #4b5563;
         }
 
         ul {
             padding-left: 20px;
         }
 
-        .last-updated {
-            font-style: italic;
-            color: #888;
-            margin-bottom: 30px;
+        li {
+            margin-bottom: 10px;
         }
 
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 14px;
-            color: #999;
-            text-align: center;
-        }
-
-        .language-toggle {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 20px;
-        }
-
-        .language-toggle a {
-            text-decoration: none;
-            color: #009688;
-            font-weight: bold;
-            font-size: 14px;
+        .lang-section {
+            padding: 20px 0;
         }
 
         hr {
             border: 0;
-            border-top: 1px solid #eee;
-            margin: 40px 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 60px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-weight: 600;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 20px 15px;
+                padding: 20px 10px;
             }
 
             .container {
-                padding: 25px;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -98,98 +134,90 @@
 <body>
 
     <div class="container">
-        <div id="english-version">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: March 4, 2026</p>
+        <!-- English Version -->
+        <article class="lang-section">
+            <header>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: March 14, 2026</p>
+            </header>
 
-            <p>This Privacy Policy describes how <strong>Super Fast QR Scanner</strong> ("the App," "we," "us," or
-                "our") handles your information when you use our mobile application. We are committed to protecting your
-                privacy and ensuring that your personal information is handled safely and responsibly.</p>
+            <p>This Privacy Policy describes how <span class="highlight">Super Fast QR Scanner</span> ("the App," "we,"
+                "us," or "our") handles your information. We are committed to protecting your privacy and ensuring your
+                personal data is handled safely.</p>
 
-            <h2>1. INFORMATION COLLECTION AND USE</h2>
+            <h2>1. INFORMATION COLLECTION & USE</h2>
 
             <h3>1.1 Camera Access</h3>
-            <p>The App requires access to your device's camera to function correctly as a QR and barcode scanner. The
-                camera is used solely to capture QR codes or barcodes for scanning and processing within the App. We do
-                not capture, store, or transmit any images or videos from your camera to external servers.</p>
+            <p>The App requires access to your device's camera to function as a <span class="highlight">QR code
+                    scanner</span>. The camera is used solely to capture QR codes for processing within the App. We
+                <strong>do not</strong> capture, store, or transmit any images or videos to external servers.</p>
 
-            <h3>1.2 Storage & Gallery Access</h3>
-            <p>The App provides a "Scan from Gallery" feature, which requires access to your device's photo library.
-                This access is only used when you explicitly select an image to be scanned. Additionally, when you
-                generate a QR code, you may choose to save the image to your gallery, which also requires storage
-                permission.</p>
+            <h3>1.2 Storage & Gallery</h3>
+            <p>We access your photo library only when you explicitly use the "Scan from Gallery" feature or when you
+                choose to save a generated QR code image to your device.</p>
 
-            <h3>1.3 Local Data Storage</h3>
-            <p>The App uses local storage (Hive database) on your device to save your scan and generation history,
-                favorites, and application settings (such as language preferences). This data remains on your device and
-                is not synchronized or uploaded to any of our servers.</p>
+            <h3>1.3 Local Storage (Hive)</h3>
+            <p>All data, including your scan history, generation history, and favorites, are stored <span
+                    class="highlight">locally on your device</span>. This information is never uploaded to our servers
+                or synchronized with any cloud service.</p>
 
-            <h3>1.4 Sensitive Actions (System Intents)</h3>
-            <p>For sensitive actions like making phone calls, sending emails, or connecting to WiFi, the App uses
-                standard system "Intents." This means the App passes the information to your device's default system
-                application (e.g., Phone app, Email client, or WiFi settings) to perform the action. We do not execute
-                these actions secretly or capture any resulting data.</p>
+            <h3>1.4 System Intents</h3>
+            <p>Sensitive actions (like connecting to WiFi, making calls, or sending emails) are handled via standard
+                Android/iOS System Intents. This ensures that the App passes the data to the respective secure system
+                application rather than executing actions secretly.</p>
 
             <h2>2. ADVERTISING</h2>
-            <p>The App uses third-party advertising services (e.g., StartApp) to display advertisements. These
-                third-party services may collect and use information about your use of the App and other websites and
-                applications, including your IP address, device ID, and usage data, to provide advertisements about
-                goods and services that may be of interest to you. This collection is governed by the privacy policies
-                of the respective advertising providers.</p>
+            <p>The App uses third-party advertising services (e.g., StartApp) to help fund the development. These
+                providers may collect anonymous data such as IP addresses or device IDs according to their own privacy
+                policies.</p>
 
             <h2>3. DATA SHARING</h2>
-            <p>We do not sell, trade, or otherwise transfer your personal information to outside parties. All scanning
-                data and history are stored locally on your device.</p>
+            <p>We <span class="highlight">do not sell</span>, trade, or transfer any of your personal information. Your
+                scanning data remains encrypted within the local App storage on your device.</p>
 
-            <h2>4. CHILDREN'S PRIVACY</h2>
-            <p>Our services do not address anyone under the age of 13. We do not knowingly collect personally
-                identifiable information from children under 13.</p>
-
-            <h2>5. CHANGES TO THIS PRIVACY POLICY</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
-                Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
-            </p>
-
-            <h2>6. CONTACT US</h2>
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <br>
+            <h2>4. CONTACT</h2>
+            <p>Questions? Reach us at: <br>
                 <strong>Email:</strong> pqkpharmacist@gmail.com
             </p>
-        </div>
+        </article>
 
         <hr>
 
-        <div id="vietnamese-version">
-            <h1>Chính sách Quyền riêng tư</h1>
-            <p class="last-updated">Cập nhật lần cuối: Ngày 04 tháng 03 năm 2026</p>
+        <!-- Vietnamese Version -->
+        <article class="lang-section" dir="ltr">
+            <header>
+                <h1>Chính sách Quyền riêng tư</h1>
+                <p class="last-updated">Cập nhật lần cuối: Ngày 14 tháng 03 năm 2026</p>
+            </header>
 
-            <p>Chính sách Quyền riêng tư này mô tả cách <strong>Máy Quét QR Siêu Tốc</strong> ("Ứng dụng", "chúng tôi")
-                xử lý thông tin của bạn. Chúng tôi cam kết bảo vệ quyền riêng tư và đảm bảo thông tin của bạn được xử lý
-                an toàn.</p>
+            <p>Chính sách này mô tả cách <span class="highlight">Máy Quét QR Siêu Tốc</span> ("Ứng dụng", "chúng tôi")
+                xử lý thông tin của bạn. Chúng tôi cam kết bảo mật tuyệt đối dữ liệu người dùng.</p>
 
             <h2>1. THU THẬP VÀ SỬ DỤNG THÔNG TIN</h2>
             <ul>
-                <li><strong>Camera:</strong> Chỉ dùng để quét mã QR, không lưu trữ hay gửi ảnh/video đi bất cứ đâu.</li>
-                <li><strong>Thư viện ảnh:</strong> Chỉ truy cập khi bạn chủ động chọn ảnh để quét hoặc lưu mã QR đã tạo.
-                </li>
-                <li><strong>Dữ liệu cục bộ:</strong> Lịch sử quét và cài đặt được lưu ngay trên máy bạn (Sử dụng Hive),
-                    không được đồng bộ lên máy chủ của chúng tôi.</li>
-                <li><strong>Hành động nhạy cảm:</strong> Việc gọi điện, gửi mail được thực hiện qua ứng dụng mặc định
-                    của hệ thống để đảm bảo an toàn tuyệt đối.</li>
+                <li><span class="highlight">Camera:</span> Chỉ dùng để quét mã QR. Không lưu trữ hay gửi ảnh/video ra
+                    ngoài.</li>
+                <li><span class="highlight">Thư viện ảnh:</span> Chỉ truy cập khi bạn chủ động quét ảnh từ máy hoặc lưu
+                    mã QR đã tạo.</li>
+                <li><span class="highlight">Dữ liệu cục bộ:</span> Lịch sử quét và yêu thích được lưu an toàn trên máy
+                    bạn (Sử dụng Hive), không được đồng bộ lên máy chủ.</li>
+                <li><span class="highlight">Hành động nhạy cảm:</span> Việc gọi điện, gửi mail được thực hiện qua ứng
+                    dụng hệ thống để đảm bảo an toàn.</li>
             </ul>
 
             <h2>2. QUẢNG CÁO</h2>
-            <p>Chúng tôi sử dụng dịch vụ quảng cáo của bên thứ ba (StartApp). Các dịch vụ này có thể thu thập thông tin
-                ẩn danh để hiển thị quảng cáo phù hợp với bạn theo chính sách riêng của họ.</p>
+            <p>Chúng tôi sử dụng dịch vụ StartApp để hiển thị quảng cáo. Các dữ liệu thu thập (nếu có) tuân thủ chính
+                sách bảo mật riêng của StartApp.</p>
 
             <h2>3. CHIA SẺ DỮ LIỆU</h2>
-            <p>Chúng tôi không bán hay chia sẻ bất kỳ thông tin nào của bạn cho bên thứ ba. Mọi dữ liệu quét được đều
-                nằm trên thiết bị của bạn.</p>
+            <p>Chúng tôi <span class="highlight">không bán</span> hay chia sẻ bất kỳ thông tin nào. Mọi dữ liệu đều nằm
+                quyền kiểm soát của bạn trên thiết bị.</p>
 
             <h2>4. LIÊN HỆ</h2>
-            <p>Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ qua email: <br>
+            <p>Nếu có thắc mắc, vui lòng gửi email về: <br>
                 <strong>Email:</strong> pqkpharmacist@gmail.com
             </p>
-        </div>
+        </article>
 
         <div class="footer">
             &copy; 2026 Super Fast QR Scanner. All rights reserved.
